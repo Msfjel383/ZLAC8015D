@@ -165,7 +165,7 @@ uint8_t ZLAC8015D::get_pos(int32_t res[2]) {
 	res[0] = (registers[0] << 16) | registers[1];
 	res[1] = (registers[2] << 16) | registers[3];
 
-    return result;
+    return result;
 }
 
 uint8_t ZLAC8015D::emerg_stop(){
