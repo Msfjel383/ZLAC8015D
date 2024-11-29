@@ -1,5 +1,3 @@
-
-
 #ifndef ZLAC8015D_H
 #define ZLAC8015D_H
 
@@ -36,6 +34,23 @@
 #define R_FB_POS_HI  0x20A9
 #define R_FB_POS_LO  0x20AA
 
+//Torque control
+#define L_TORQUE_TIME  0x2086
+#define R_TORQUE_TIME  0x2087
+#define L_CMD_TORQUE  0x2090
+#define R_CMD_TORQUE  0x2091
+#define L_FB_TORQUE  0x20AD
+#define R_FB_TORQUE  0x20AE
+
+//Emergency stop
+#define EMERG_INP_LEVEL  0x2016
+#define EMERG_INP_X0  0x2017
+#define EMERG_INP_X1  0x2018
+
+//Read Errors
+#define L_ERROR  0x20A5
+#define R_ERROR  0x20A6
+
 // Control command
 #define EMER_STOP  0x05
 #define ALRM_CLR 0x06
@@ -44,6 +59,15 @@
 #define POS_SYNC 0x10
 #define POS_L_START 0x11
 #define POS_R_START 0x12
+
+// Common constants
+#define MAX_MOTOR_RPM 0x2008
+
+// Read only
+#define READ_STATUS 0x20A2
+#define READ_TEMP 0x20A4
+#define READ_DRIVER_TEMP 0x20B0
+
 
 
 class ZLAC8015D
@@ -63,6 +87,8 @@ public:
 	uint8_t set_maxRPM_pos(uint16_t max_L_rpm, uint16_t max_R_rpm);
 	uint8_t set_rpm(int16_t L_rpm, int16_t R_rpm);
 	uint8_t get_rpm(int16_t res[2]);
+	uint8_t get_pos(int32_t res[2]);
+	uint8_t emerg_stop();
 
 
 private:

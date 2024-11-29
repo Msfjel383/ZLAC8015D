@@ -148,3 +148,27 @@ uint8_t ZLAC8015D::get_rpm(int16_t res[2]){
 
 	return result;
 }
+
+uint8_t get_pos(int32_t res[2]) {
+    uint16_t registers[4];
+    /**
+     * Get position of each wheel
+     * res[2] is passed by reference from user, defined on sketch
+     * */
+    _node->readHoldingRegisters(L_CMD_REL_POS_LO, 4);
+
+	if (result == 0){
+	    for (int j = 0; j < 4; j++){
+	      registers[j] = ( (int16_t)(_node->getResponseBuffer(j)));
+	    }
+	}
+	res[0] = (registers[0] << 16) | registers[1];
+	res[1] = (registers[2] << 16) | registers[3];
+
+    return result;
+}
+	uint8_t emerg_stop(){
+	/**
+	 * Emergency stop
+	 * */
+	}
