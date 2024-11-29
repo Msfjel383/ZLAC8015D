@@ -89,6 +89,7 @@ public:
 	uint8_t get_rpm(int16_t res[2]);
 	uint8_t get_pos(int32_t res[2]);
 	uint8_t emerg_stop();
+	uint8_t clear_fault();
 
 
 private:

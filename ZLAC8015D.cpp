@@ -149,7 +149,7 @@ uint8_t ZLAC8015D::get_rpm(int16_t res[2]){
 	return result;
 }
 
-uint8_t get_pos(int32_t res[2]) {
+uint8_t ZLAC8015D::get_pos(int32_t res[2]) {
     uint16_t registers[4];
     /**
      * Get position of each wheel
@@ -167,8 +167,17 @@ uint8_t get_pos(int32_t res[2]) {
 
     return result;
 }
-	uint8_t emerg_stop(){
-	/**
-	 * Emergency stop
-	 * */
-	}
+uint8_t ZLAC8015D::emerg_stop(){
+/**
+ * Emergency stop
+ * */
+	result = _node->writeSingleRegister(CONTROL_REG, EMER_STOP);
+	return result;
+}
+uint8_t ZLAC8015D::clear_fault(){
+/**
+ * Clear fault
+ * */
+	result = _node->writeSingleRegister(CONTROL_REG, ALRM_CLR);
+	return result;
+}
