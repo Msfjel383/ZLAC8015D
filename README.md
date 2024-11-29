@@ -1,3 +1,8 @@
+# This Fork is currently untested! don't use it!
+
+
+
+
 # ZLAC8015D ESP32-Arduino library
 
 This library is using ModbusMaster to communicate with ZLAC8015D motor driver to control and get feedback of motor.
