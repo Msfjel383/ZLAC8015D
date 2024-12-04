@@ -1,4 +1,14 @@
-# This Fork is currently untested! don't use it!
+# Tested funktions:
+set_modbus
+disable_motor
+set_mode
+enable_motor
+set_rpm
+get_rpm
+get_pos
+get_error
+
+rest is currently untested!
 
 
 
