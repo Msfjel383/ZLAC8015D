@@ -222,6 +222,8 @@ uint8_t ZLAC8015D::get_error(String &error){
 		}
 	}
 	error = "L: " + error_msg[0] + " R: " + error_msg[1];	
+	
+	return result;
 }
 
 uint8_t ZLAC8015D::emerg_stop(){
