@@ -183,46 +183,46 @@ uint8_t ZLAC8015D::get_error(String &error){
 				error_msg[j] += "No error";
 				break;
 			case ERROR_OVER_VOLTAGE:
-				error_msg[j] += "Over voltage";
+				error_msg[j] += "Over voltage error";
 				break;
 			case ERROR_UNDER_VOLTAGE:
-				error_msg[j] += "Under voltage";
+				error_msg[j] += "Under voltage error";
 				break;
 			case ERROR_OVER_CURRENT:
-				error_msg[j] += "Over current";
+				error_msg[j] += "Over current error";
 				break;
 			case ERROR_OVER_LOAD:
-				error_msg[j] += "Over load";
+				error_msg[j] += "Over load error";
 				break;
 			case ERROR_CURRENT_OUT_OF_TOLERANCE:
-				error_msg[j] += "Current out of tolerance";
+				error_msg[j] += "Current out of tolerance error";
 				break;
 			case ERROR_ENCODER_OUT_OF_TOLERANCE:
-				error_msg[j] += "Encoder out of tolerance";
+				error_msg[j] += "Encoder out of tolerance error";
 				break;
 			case ERROR_VELOCITY_OUT_OF_TOLERANCE:
-				error_msg[j] += "Velocity out of tolerance";
+				error_msg[j] += "Velocity out of tolerance error";
 				break;
 			case ERROR_REFERENCE_VOLTAGE:
-				error_msg[j] += "Reference voltage";
+				error_msg[j] += "Reference voltage error";
 				break;
 			case ERROR_EEPROM:
-				error_msg[j] += "EEPROM";
+				error_msg[j] += "EEPROM error";
 				break;
 			case ERROR_HALL:
-				error_msg[j] += "Hall";
+				error_msg[j] += "Hall error";
 				break;
 			case ERROR_MOTOR_OVER_TEMPERATURE:
-				error_msg[j] += "Motor over temperature";
+				error_msg[j] += "Motor over temperature error";
 				break;
 			default:
-				error_msg[j] += "Undefined Error";
+				error_msg[j] += "Undefined error";
 				break;
 			}
 		}
 	}
 	error = "L: " + error_msg[0] + " R: " + error_msg[1];	
-	
+
 	return result;
 }
 
