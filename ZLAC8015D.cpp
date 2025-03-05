@@ -150,7 +150,7 @@ uint8_t ZLAC8015D::get_rpm(int16_t res[2]){
 }
 
 uint8_t ZLAC8015D::get_pos(int32_t res[2]) {
-    int16_t registers[4];
+    uint16_t registers[4];
     /**
      * Get position of each wheel
      * res[2] is passed by reference from user, defined on sketch
